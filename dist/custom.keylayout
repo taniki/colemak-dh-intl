@@ -37,8 +37,8 @@
   ┃        ┃ Q   │ W   │ F   │ P   │ B   │ J   │ L   │ U   │ Y   │ :   │ {   │ }   │ |     │
   ┃ ↹      ┃   @ │   < │   > │   $ │   % │   ^ │   & │   * │   ' │ ; ` │ [   │ ]   │ \     │
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━━━┪
-  ┃         ┃ A   │ R   │ S   │ T   │ G   │ M   │ N   │ E   │ I   │ O   │*¨*¨ ┃            ┃
-  ┃ ⇬       ┃   { │   ( │   ) │   } │   = │   \ │   + │   - │   / │   " │***´ ┃ ⏎          ┃
+  ┃         ┃ A   │ R   │ S   │ T   │ G   │ M   │ N   │ E   │ I   │ O   │ "*¨ ┃            ┃
+  ┃ ⇬       ┃   { │   ( │   ) │   } │   = │   \ │   + │   - │   / │   " │ '*´ ┃ ⏎          ┃
   ┣━━━━━━━━━┻━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┻━━━━━━━━━━━━┫
   ┃            ┃ Z   │ X   │ C   │ D   │ V   │ K   │ H   │ <   │ >   │ ?   ┃               ┃
   ┃ ⇧          ┃   ~ │   [ │   ] │   _ │   # │   | │   ! │ , ; │ . : │ / ? ┃ ⇧             ┃
@@ -87,7 +87,7 @@
       <!-- Letters, first row -->
       <key code="12"  output="q" />
       <key code="13"  action="ad02_w" />
-      <key code="14"  action="ad03_f" />
+      <key code="14"  output="f" />
       <key code="15"  action="ad04_p" />
       <key code="17"  output="b" />
       <key code="16"  action="ad06_j" />
@@ -116,8 +116,8 @@
       <key code="11"  action="ab05_v" />
       <key code="45"  action="ab06_k" />
       <key code="46"  action="ab07_h" />
-      <key code="43"  action="ab08_," />
-      <key code="47"  action="ab09_." />
+      <key code="43"  output="," />
+      <key code="47"  output="." />
       <key code="44"  output="/" />
 
       <!-- Pinky keys -->
@@ -125,7 +125,7 @@
       <key code="24"  action="ae12_=" />
       <key code="33"  output="[" />
       <key code="30"  output="]" />
-      <key code="39"  action="dead_1dk" />
+      <key code="39"  output="'" />
       <key code="50"  output="`" />
       <key code="42"  output="\" />
       <key code="10"  output="&#x0010;" />
@@ -214,7 +214,7 @@
       <!-- Letters, first row -->
       <key code="12"  output="Q" />
       <key code="13"  action="ad02_W" />
-      <key code="14"  action="ad03_F" />
+      <key code="14"  output="F" />
       <key code="15"  action="ad04_P" />
       <key code="17"  output="B" />
       <key code="16"  action="ad06_J" />
@@ -252,7 +252,7 @@
       <key code="24"  action="ae12_+" />
       <key code="33"  output="{" />
       <key code="30"  output="}" />
-      <key code="39"  action="dead_diaeresis" />
+      <key code="39"  output="&#x0022;" />
       <key code="50"  output="~" />
       <key code="42"  output="|" />
       <key code="10"  output="&#x0010;" />
@@ -341,7 +341,7 @@
       <!-- Letters, first row -->
       <key code="12"  output="Q" />
       <key code="13"  action="ad02_W" />
-      <key code="14"  action="ad03_F" />
+      <key code="14"  output="F" />
       <key code="15"  action="ad04_P" />
       <key code="17"  output="B" />
       <key code="16"  action="ad06_J" />
@@ -370,8 +370,8 @@
       <key code="11"  action="ab05_V" />
       <key code="45"  action="ab06_K" />
       <key code="46"  action="ab07_H" />
-      <key code="43"  action="ab08_," />
-      <key code="47"  action="ab09_." />
+      <key code="43"  output="," />
+      <key code="47"  output="." />
       <key code="44"  output="/" />
 
       <!-- Pinky keys -->
@@ -379,7 +379,7 @@
       <key code="24"  action="ae12_=" />
       <key code="33"  output="[" />
       <key code="30"  output="]" />
-      <key code="39"  action="dead_1dk" />
+      <key code="39"  output="'" />
       <key code="50"  output="`" />
       <key code="42"  output="\" />
       <key code="10"  output="&#x0010;" />
@@ -707,9 +707,6 @@
   </keyMapSet>
 
   <actions>
-    <action id="dead_1dk">
-      <when state="none" next="1dk" />
-    </action>
     <action id="dead_grave">
       <when state="none" next="grave" />
     </action>
@@ -733,12 +730,10 @@
     </action>
     <action id="ae02_2">
       <when state="none"       output="2" />
-      <when state="1dk"        output="«" />
       <when state="circumflex" output="²" />
     </action>
     <action id="ae03_3">
       <when state="none"       output="3" />
-      <when state="1dk"        output="»" />
       <when state="circumflex" output="³" />
     </action>
     <action id="ae04_4">
@@ -747,7 +742,6 @@
     </action>
     <action id="ae05_5">
       <when state="none"       output="5" />
-      <when state="1dk"        output="€" />
       <when state="circumflex" output="⁵" />
     </action>
     <action id="ae06_6">
@@ -796,16 +790,7 @@
     </action>
     <action id="ad02_x003c">
       <when state="none"       output="&#x003c;" />
-      <when state="1dk"        output="•" />
       <when state="tilde"      output="≲" />
-    </action>
-    <action id="ad03_f">
-      <when state="none"       output="f" />
-      <when state="1dk"        output="é" />
-    </action>
-    <action id="ad03_F">
-      <when state="none"       output="F" />
-      <when state="1dk"        output="É" />
     </action>
     <action id="ad03_x003e">
       <when state="none"       output="&#x003e;" />
@@ -821,27 +806,22 @@
     </action>
     <action id="ad06_j">
       <when state="none"       output="j" />
-      <when state="1dk"        output="ý" />
       <when state="circumflex" output="ĵ" />
     </action>
     <action id="ad06_J">
       <when state="none"       output="J" />
-      <when state="1dk"        output="Ý" />
       <when state="circumflex" output="Ĵ" />
     </action>
     <action id="ad07_l">
       <when state="none"       output="l" />
-      <when state="1dk"        output="ú" />
       <when state="acute"      output="ĺ" />
     </action>
     <action id="ad07_L">
       <when state="none"       output="L" />
-      <when state="1dk"        output="Ú" />
       <when state="acute"      output="Ĺ" />
     </action>
     <action id="ad08_u">
       <when state="none"       output="u" />
-      <when state="1dk"        output="í" />
       <when state="grave"      output="ù" />
       <when state="acute"      output="ú" />
       <when state="circumflex" output="û" />
@@ -850,7 +830,6 @@
     </action>
     <action id="ad08_U">
       <when state="none"       output="U" />
-      <when state="1dk"        output="Í" />
       <when state="grave"      output="Ù" />
       <when state="acute"      output="Ú" />
       <when state="circumflex" output="Û" />
@@ -859,7 +838,6 @@
     </action>
     <action id="ad09_y">
       <when state="none"       output="y" />
-      <when state="1dk"        output="ó" />
       <when state="grave"      output="ỳ" />
       <when state="acute"      output="ý" />
       <when state="circumflex" output="ŷ" />
@@ -868,7 +846,6 @@
     </action>
     <action id="ad09_Y">
       <when state="none"       output="Y" />
-      <when state="1dk"        output="Ó" />
       <when state="grave"      output="Ỳ" />
       <when state="acute"      output="Ý" />
       <when state="circumflex" output="Ŷ" />
@@ -879,7 +856,6 @@
     <!-- Letters, second row -->
     <action id="ac01_a">
       <when state="none"       output="a" />
-      <when state="1dk"        output="á" />
       <when state="grave"      output="à" />
       <when state="acute"      output="á" />
       <when state="circumflex" output="â" />
@@ -888,7 +864,6 @@
     </action>
     <action id="ac01_A">
       <when state="none"       output="A" />
-      <when state="1dk"        output="Á" />
       <when state="grave"      output="À" />
       <when state="acute"      output="Á" />
       <when state="circumflex" output="Â" />
@@ -1038,13 +1013,11 @@
     </action>
     <action id="ab03_c">
       <when state="none"       output="c" />
-      <when state="1dk"        output="ç" />
       <when state="acute"      output="ć" />
       <when state="circumflex" output="ĉ" />
     </action>
     <action id="ab03_C">
       <when state="none"       output="C" />
-      <when state="1dk"        output="Ç" />
       <when state="acute"      output="Ć" />
       <when state="circumflex" output="Ĉ" />
     </action>
@@ -1066,7 +1039,6 @@
     </action>
     <action id="ab07_h">
       <when state="none"       output="h" />
-      <when state="1dk"        output="µ" />
       <when state="circumflex" output="ĥ" />
       <when state="diaeresis"  output="ḧ" />
     </action>
@@ -1075,18 +1047,9 @@
       <when state="circumflex" output="Ĥ" />
       <when state="diaeresis"  output="Ḧ" />
     </action>
-    <action id="ab08_,">
-      <when state="none"       output="," />
-      <when state="1dk"        output="·" />
-    </action>
     <action id="ab08_x003c">
       <when state="none"       output="&#x003c;" />
-      <when state="1dk"        output="•" />
       <when state="tilde"      output="≲" />
-    </action>
-    <action id="ab09_.">
-      <when state="none"       output="." />
-      <when state="1dk"        output="…" />
     </action>
     <action id="ab09_x003e">
       <when state="none"       output="&#x003e;" />
@@ -1111,7 +1074,6 @@
     <!-- Space bar -->
     <action id="spce_x0020">
       <when state="none"       output="&#x0020;" />
-      <when state="1dk"        output="'" />
       <when state="grave"      output="`" />
       <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
@@ -1120,7 +1082,6 @@
     </action>
     <action id="spce_x00a0">
       <when state="none"       output="&#x00a0;" />
-      <when state="1dk"        output="'" />
       <when state="grave"      output="`" />
       <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
@@ -1129,7 +1090,6 @@
     </action>
     <action id="spce_x202f">
       <when state="none"       output="&#x202f;" />
-      <when state="1dk"        output="'" />
       <when state="grave"      output="`" />
       <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
@@ -1139,7 +1099,6 @@
   </actions>
 
   <terminators>
-    <when state="1dk"        output="'" />
     <when state="grave"      output="`" />
     <when state="acute"      output="´" />
     <when state="circumflex" output="^" />

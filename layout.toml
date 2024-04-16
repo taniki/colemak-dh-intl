@@ -1,7 +1,7 @@
 # kalamine keyboard layout descriptor
 name        = "colemakdh-tk"   # full layout name, displayed in the keyboard settings
 name8       = "custom"         # short Windows filename: no spaces, no special chars
-locale      = "colemakdh"             # locale/language id
+locale      = "en-dh"             # locale/language id
 variant     = "tk"         # layout variant id
 author      = "nobody"         # author name
 description = "custom colemak-dh layout"
@@ -17,8 +17,8 @@ base = '''
 ┃        ┃ Q   │ W   │ F   │ P   │ B   │ J   │ L   │ U   │ Y   │ :   │ {   │ }   │ |     │
 ┃ ↹      ┃     │     │   é │     │     │   ý │   ú │   í │   ó │ ;   │ [   │ ]   │ \     │
 ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━━━┪
-┃         ┃ A   │ R   │ S   │ T   │ G   │ M   │ N   │ E   │ I   │ O   │*¨   ┃            ┃
-┃  ⇬      ┃   á │     │     │     │     │     │     │     │     │     │** ' ┃ ⏎          ┃
+┃         ┃ A   │ R   │ S   │ T   │ G   │ M   │ N   │ E   │ I   │ O   │ "   ┃            ┃
+┃  ⇬      ┃   á │     │     │     │     │     │     │     │     │     │ '   ┃ ⏎          ┃
 ┣━━━━━━━━━┻━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┻━━━━━━━━━━━━┫
 ┃            ┃ Z   │ X   │ C   │ D   │ V   │ K   │ H   │ < • │ >   │ ?   ┃               ┃
 ┃ ⇧          ┃     │     │   ç │     │     │     │   µ │ , · │ . … │ /   ┃ ⇧             ┃
