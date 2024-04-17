@@ -1,8 +1,8 @@
 # kalamine keyboard layout descriptor
-name        = "colemakdh-tk"   # full layout name, displayed in the keyboard settings
+name        = "colemak-dh-intl"   # full layout name, displayed in the keyboard settings
 name8       = "custom"         # short Windows filename: no spaces, no special chars
-locale      = "en-dh"             # locale/language id
-variant     = "tk"         # layout variant id
+locale      = "en"             # locale/language id
+variant     = "colemak-dh-intl"         # layout variant id
 author      = "nobody"         # author name
 description = "custom colemak-dh layout"
 url         = "https://OneDeadKey.github.com/kalamine"
@@ -21,7 +21,7 @@ base = '''
 ┃  ⇬      ┃   á │     │     │     │     │     │     │     │     │     │ '   ┃ ⏎          ┃
 ┣━━━━━━━━━┻━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┻━━━━━━━━━━━━┫
 ┃            ┃ Z   │ X   │ C   │ D   │ V   │ K   │ H   │ < • │ >   │ ?   ┃               ┃
-┃ ⇧          ┃     │     │   ç │     │     │     │   µ │ , · │ . … │ /   ┃ ⇧             ┃
+┃ ⇧          ┃     │     │     │     │     │     │   µ │ , · │ . … │ /   ┃ ⇧             ┃
 ┣━━━━━━━┳━━━━┻━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
 ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
 ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ Alt   ┃ super ┃ menu  ┃ Ctrl  ┃
@@ -31,7 +31,7 @@ base = '''
 altgr = '''
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
 │  *~ │     │     │     │     │     │     │     │     │     │     │     │     ┃          ┃
-│  *` │     │     │     │     │     │  *^ │     │     │     │     │     │     ┃ ⌫        ┃
+│  *` │     │     │  *¯ │     │     │  *^ │     │     │     │     │     │     ┃ ⌫        ┃
 ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┯━━━━━━━┩
 ┃        ┃     │     │     │     │     │     │     │     │     │     │     │     │       │
 ┃ ↹      ┃   @ │   < │   > │   $ │   % │   ^ │   & │   * │   ' │   ` │     │     │       │
@@ -39,8 +39,8 @@ altgr = '''
 ┃         ┃     │     │     │     │     │     │     │     │     │     │  *¨ ┃            ┃
 ┃ ⇬       ┃   { │   ( │   ) │   } │   = │   \ │   + │   - │   / │   " │  *´ ┃ ⏎          ┃
 ┣━━━━━━━━━┻━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┻━━━━━━━━━━━━┫
-┃            ┃     │     │     │     │     │     │     │     │     │     ┃               ┃
-┃ ⇧          ┃   ~ │   [ │   ] │   _ │   # │   | │   ! │   ; │   : │   ? ┃ ⇧             ┃
+┃            ┃     │     │   Ç │     │     │     │     │     │     │     ┃               ┃
+┃ ⇧          ┃   ~ │   [ │   ç │   _ │   # │   | │   ! │  *¸ │   : │   ? ┃ ⇧             ┃
 ┣━━━━━━━┳━━━━┻━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
 ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
 ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ Alt   ┃ super ┃ menu  ┃ Ctrl  ┃
